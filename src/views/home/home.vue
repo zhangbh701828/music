@@ -7,7 +7,7 @@
 
 <script>
 // import apiMusic from '../../../public/api/api'
-import lunbotu from '../../views/home/components/banner'
+// import lunbotu from '../../views/home/components/banner'
 
 // const api = 'http://localhost:3000'
 export default {
