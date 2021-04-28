@@ -1,13 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import index from '@/views/index/index'
+import home from '@/views/home/home'
+import gedan from '@/views/gedan/gedan'
 
 Vue.use(VueRouter)
 
 const routes = [{
   path: '/',
-  name: 'index',
-  component: index
+  name: 'home',
+  component: home
+}, {
+  path: '/gedan',
+  name: 'gedan',
+  component: gedan
 }]
 
 const router = new VueRouter({
