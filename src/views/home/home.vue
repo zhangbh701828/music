@@ -1,15 +1,15 @@
 <template>
   <div>
     <div>首页</div>
-    <lunbotu></lunbotu>
+    <lunbotu :chuan="banner"></lunbotu>
   </div>
 </template>
 
 <script>
-// import apiMusic from '../../../public/api/api'
-// import lunbotu from '../../views/home/components/banner'
+import apiMusic from '../../../public/api/api'
+import lunbotu from '../../views/home/components/banner'
 
-// const api = 'http://localhost:3000'
+const api = 'http://localhost:3000'
 export default {
   name: 'home',
   data () {
@@ -17,20 +17,27 @@ export default {
       banner: ''
     }
   },
+  components: {
+    lunbotu
+  },
   methods: {
-    // getHome () {
-    //   this.axios.get(apiMusic.findBanner.replace(/api/, api))
-    //     .then(res => {
-    //       console.log(res)
-    //       this.banner = res.data.banner
-    //     })
-    //     .catch(arr => {
-    //       console.log(arr)
-    //     })
-    // }
+    getHome () {
+      this.axios.get(apiMusic.findBanner.replace(/api/, api))
+        .then(res => {
+          if (res.status === 200) {
+            console.log(res)
+            console.log(res.data.banners)
+            this.banner = res.data.banners
+            console.log(this.banner)
+          }
+        })
+        .catch(arr => {
+          console.log(arr)
+        })
+    }
   },
   mounted () {
-    // this.getHome()
+    this.getHome()
   }
 }
 </script>
