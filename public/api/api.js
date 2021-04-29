@@ -1,6 +1,7 @@
 const apiMusic = {
   // /api == http://localhost:3000/banner
   home: 'api/homepage/block/page', // 获取APP首页信息
+  fenleidaohang: 'api/homepage/dragon/ball', // 首页banner轮播图下 分类导航列表
   findBanner: 'api/banner', // 可获取发现页banner( 轮播图 ) 数据
   loginCellphone: 'api/login/cellphone', // 手机登陆
   userPlaylist: 'api/user/playlist', // 获取用户歌单
